@@ -27,15 +27,18 @@ Follow these steps to install and run the Laravel project locally:
 3. Setup environment configuration:
    cp .env.example .env
    Then open the .env file and update your database credentials and other settings as needed.
+4. store the api into the database
+   php artisan fetch:api-users
 
-4. Generate application key:
+
+6. Generate application key:
    php artisan key:generate
 
-5. Run database migrations:
+7. Run database migrations:
    php artisan migrate
 
-6. Start the development server:
+8. Start the development server:
    php artisan serve
 
-7. Access the app:
+9. Access the app:
    Open your browser and visit http://localhost:8000
