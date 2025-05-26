@@ -69,7 +69,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
-use App\Models\User;
+use App\Models\Userapi;
 
 class FetchApiUsers extends Command
 {
@@ -85,7 +85,7 @@ class FetchApiUsers extends Command
 
             if ($response->successful()) {
                 foreach ($response->json() as $apiUser) {
-                    User::updateOrCreate(
+                    UserApi::updateOrCreate(
                         ['email' => $apiUser['email']],
                         [
                             'name' => $apiUser['name'],
